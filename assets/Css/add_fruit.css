@@ -1,0 +1,140 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    text-align: center;
+    border: #13e413 1px solid;
+    padding: 40px;
+    border-radius: 20px;
+    background-color: #13e413;
+}
+
+input,
+button,
+textarea {
+    padding: 10px 20px;
+    margin: 5px;
+    border: 2px solid orange;
+    border-top: none;
+    outline: none;
+    border-radius: 8px;
+    width: 100%;
+    background: transparent;
+    color: white;
+}
+
+::placeholder {
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+button {
+    font-size: 18px;
+    font-weight: 600;
+    position: relative;
+    background-color: white;
+    z-index: 1;
+    transition: all ease 500ms;
+    overflow: hidden;
+    color: orange;
+    margin: 2px;
+    margin-bottom: 20px;
+}
+
+.a {
+    padding: 10px 20px;
+    border: 2px solid orange;
+    border-top: none;
+    outline: none;
+    border-radius: 8px;
+    width: 100%;
+    background-color: white;
+    font-size: 18px;
+    font-weight: 600;
+    transition: all ease 500ms;
+    color: orange;
+    margin-top: 10px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.a a {
+    text-decoration: none;
+    color: orange;
+    transition: all ease 500ms;
+
+}
+
+.a a:hover {
+    color: white;
+}
+
+a::before {
+    content: "";
+    background-color: orange;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: -100%;
+    transition: all ease 500ms;
+}
+
+a:hover::before {
+    left: 0;
+}
+
+button:hover {
+    color: aliceblue;
+}
+
+button::before {
+    content: "";
+    background-color: orange;
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: -50%;
+    transition: all ease 500ms;
+}
+
+button:hover::before {
+    left: 0;
+}
+
+button::after {
+    content: "";
+    background-color: orange;
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: -50%;
+    transition: all ease 500ms;
+}
+
+button:hover::after {
+    right: 0%;
+}

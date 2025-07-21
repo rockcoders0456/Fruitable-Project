@@ -1,0 +1,471 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+
+body {
+    overflow-x: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0px;
+    margin: 0px;
+}
+
+.nv {
+    background-color: #13e413;
+    padding: 20px;
+    border-radius: 60px 20px;
+    font-weight: bold;
+    color: white;
+}
+
+.nv .policy {
+    text-align: end;
+}
+@media screen and (max-width: 991.98px) {
+    .nv .policy {
+        text-align: left;
+    }
+}
+
+header {
+    overflow: hidden;
+
+}
+
+header .logo h1 {
+    color: #13e413;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+header .list ul {
+    list-style: none;
+    display: flex;
+}
+
+header .list ul li a {
+    text-decoration: none;
+    padding-bottom: 10px;
+    margin: 20px;
+    color: gray;
+    font-weight: 600;
+    transition: all ease-in-out 200ms;
+    border-bottom: 2px solid #13e41300;
+}
+
+header .list ul li a:hover {
+    color: #13e413;
+    border-bottom: 2px solid #13e413;
+}
+
+header .icon {
+    text-align: end;
+}
+
+header .icon i {
+    color: #13e413;
+    font-size: 30px;
+    margin: 0px 10px;
+    font-size: 30px;
+    margin: 0px 10px;
+}
+
+header .icon .srch {
+    padding: 10px;
+    border: 1px solid orange;
+    border-radius: 50%;
+    font-size: 20px;
+    position: relative;
+}
+
+header .icon .bag {
+    position: relative;
+}
+
+header .num {
+    background-color: orange;
+    height: 20px;
+    width: 20px;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 991.98px) {
+    header .icon {
+        text-align: center;
+        margin-top: 20px;
+    }
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    background-image: url('../../assets/img/cart-page-header-img.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    margin-bottom: 50px;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: -1;
+}
+
+.hero h1,
+.hero .crumb ol li {
+    color: white;
+    font-weight: 600;
+    z-index: 2;
+}
+
+.hero .crumb ol li a {
+    color: #13e413;
+    text-decoration: none;
+}
+.billing .form {
+    margin-bottom: 50px;
+}
+
+.billing .form h1 {
+    color: gray;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.billing .form form label {
+    width: 100%;
+    font-weight: 600;
+    color: gray;
+    margin-bottom: 20px;
+    margin-left: 5px;
+}
+
+.billing .form form input,
+textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 7px 15px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    outline: none;
+    color: #13e413;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+#email {
+    text-transform: lowercase;
+}
+
+.billing .form form textarea {
+    margin-top: 20px;
+}
+
+.billing .form form textarea,
+input::placeholder {
+    color: gray;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.billing .form form .half {
+    display: flex;
+    justify-content: space-between;
+}
+
+.billing .form form .half .frist {
+    width: 48%;
+}
+
+.billing .form form .half .second {
+    width: 48%;
+}
+
+.billing .form form span {
+    color: gray;
+    font-weight: 600;
+}
+
+.billing .form form .chk input {
+    width: auto;
+}
+
+.billing .form form .chk input:focus {
+    background-color: #13e413;
+    color: #13e413;
+}
+
+.billing .form form .chk label {
+    width: auto;
+}
+
+.billing .form form .chk label:hover {
+    cursor: pointer;
+}
+.billing .form form button{
+    padding: 10px;
+    width: 75%;
+    font-size: 20px;
+    font-weight: 600;
+    color: #13e413;
+    border: 2px solid orange;
+    border-radius: 10px;
+    background-color: white;
+    margin-top: 160px;
+    transform: translateX(139%);
+}
+@media screen and (max-width: 991.98px) {
+    .billing .form form button {
+        width: 100%;
+        transform: translateX(0%);
+    }
+}
+
+@media screen and (max-width: 767.98px) {
+    .billing .form form button {
+        width: 100%;
+        transform: translateX(0%);
+    }
+}
+
+@media screen and (max-width: 575.98px) {
+    .billing .form form button {
+        width: 100%;
+        transform: translateX(0%);
+    }
+}
+
+.billing .order-summary {
+    margin-top: 60px;
+}
+
+.billing .order-summary table .table-group-divider {
+    color: gray;
+}
+
+.billing .order-summary table thead tr th {
+    color: gray;
+    font-weight: 600;
+}
+
+.billing .order-summary table tbody tr td {
+    color: gray;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: 600;
+}
+
+.billing .order-summary table tbody tr td img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.billing .order-summary .shipping {
+    display: flex;
+    justify-content: end;
+}
+
+.billing .order-summary .shipping .text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: gray;
+    font-weight: 600;
+}
+
+.billing .order-summary ul {
+    list-style: none;
+    padding-left: 0;
+    color: gray;
+    font-weight: 600;
+}
+
+.billing .order-summary ul li {
+    position: relative;
+    padding-left: 40px;
+    margin-left: 40px;
+}
+
+.billing .order-summary ul li::before,
+.billing .order-summary .method ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 15px;
+    background: #13e413;
+    border-radius: 3px;
+    display: inline-block;
+}
+
+.billing .order-summary table tbody tr td ul li {
+    color: gray;
+    text-align: left;
+    font-weight: 600;
+}
+
+.billing .order-summary .total {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: gray;
+    font-weight: 600;
+}
+
+.billing .order-summary .method ul li {
+    color: gray;
+    font-weight: 600;
+    text-align: left;
+    padding: 20px 0px 20px 25px ;
+    margin-left: 10px;
+}
+
+.billing .order-summary ul p {
+    padding: 20px 0px;
+    margin-left: 10px;
+    font-size: 17px;
+    font-weight: 500;
+    width: 100%;
+}
+
+.main-footer {
+    padding: 50px 90px 20px 90px;
+    background-color: rgb(76, 112, 81);
+    margin-top: 100px;
+}
+
+.main-footer .text h3 {
+    color: #13e413;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.main-footer .text p {
+    color: orange;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 10px;
+}
+
+.main-footer form .main-form {
+    position: relative;
+    transform: translate(0px, -35px);
+}
+
+.main-footer form input {
+    outline: none;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 50px;
+    width: 100%;
+    color: gray;
+    text-transform: capitalize;
+}
+
+.main-footer ::placeholder {
+    color: #13e413;
+    font-weight: 600;
+}
+
+.main-footer form button {
+    background-color: #13e413;
+    padding: 15px 20px;
+    border-radius: 50px;
+    position: absolute;
+    border: none;
+    outline: none;
+    color: white;
+    top: 0px;
+    right: 0px;
+}
+
+.main-footer form button:hover {
+    background-color: #13e413;
+}
+
+.main-footer .footer-icon i {
+    text-align: center;
+    padding-top: 15px;
+    color: orange;
+    border: 1px solid orange;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    margin-left: 10px;
+    transition: all ease-in-out 500ms;
+}
+
+.main-footer .footer-icon i:hover {
+    transform: scale(1.3) translate(0px, -10px);
+    background-color: orange;
+    color: white;
+}
+
+.main-footer hr {
+    height: 1px;
+    background-color: orange;
+    border: none;
+    outline: none;
+    opacity: 1;
+}
+
+.main-footer .list ul {
+    list-style: none;
+}
+
+.main-footer .list ul li {
+    padding-top: 10px;
+}
+
+.main-footer .list ul li p {
+    line-height: 30px;
+    color: rgb(173, 173, 173);
+}
+
+.main-footer .list ul li h3 {
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.main-footer .list ul li {
+    color: rgb(173, 173, 173);
+}
+
+.main-footer .list ul li a {
+    border: 2px solid orange;
+    border-radius: 25px;
+    padding: 5px 20px;
+    margin: 0px;
+    text-decoration: none;
+    color: #13e413;
+    font-weight: 600;
+}
+
+.main-footer .line {
+    color: white;
+    font-weight: 600;
+}
+
+.main-footer .line span {
+    color: #13e413;
+    padding-bottom: 2px;
+    border-bottom: 2px solid white;
+}
