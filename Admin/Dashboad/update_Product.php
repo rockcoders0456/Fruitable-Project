@@ -10,19 +10,20 @@ if (isset($_POST['submit'])) {
     if (!empty($_FILES['file']['name'])) {
         $name = $_FILES['file']['name'];
         $tempname = $_FILES['file']['tmp_name'];
-        $newname = rand(1111, 9999) . '_' . $name;
-        $target = '../../assets/Images';
+        $newname = rand(1111, 9999).'_' . $name;
+        $target = '../../assets/Images/';
         move_uploaded_file($tempname, $target . '/' . $newname);
     } else {
         $newname = $result['image'];
     };
     $tittle = $_POST['tittle'];
     $price = $_POST['price'];
+    $category = $_POST['category'];
     $details = $_POST['detail'];
-    $update = $conn->prepare("UPDATE `products` SET `tittle`= ?,`details`= ?,`price`= ?,`image`= ? WHERE id = ?");
-    $update->bind_param("ssisi", $tittle, $details, $price, $newname, $ids);
+    $update = $conn->prepare("UPDATE `products` SET `tittle`= ?,`details`= ?,`price`= ?,`category`= ?,`image`= ? WHERE id = ?");
+    $update->bind_param("ssissi", $tittle, $details, $price, $category, $newname, $ids);
     if ($update->execute()) {
-        echo "<script>alert('Product updated successfully.'); window.location.href='view_fruit.php';</script>";
+        echo "<script>alert('Product updated successfully.'); window.location.href = './dashboad.php';</script>";
     } else {
         echo "<script>alert('Failed to update product.');</script>";
     }
@@ -41,7 +42,7 @@ $result = $get->fetch_assoc();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Update Product</title>
     <link rel="stylesheet" href="../../assets/Laibraries/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../assets/Css/add_fruit.css">
+    <link rel="stylesheet" href="../../assets/Css/add_Product.css">
 </head>
 
 <body>
@@ -56,13 +57,23 @@ $result = $get->fetch_assoc();
                         <input type="file" name="file">
                     </div>
                     <div class="">
-                        <input type="text" placeholder="Product Tittle" name="tittle" value="<?php echo $result['tittle'] ?>" required>
+                        <input type="text" placeholder="Product Tittle" name="tittle"
+                            value="<?php echo $result['tittle'] ?>" required>
                     </div>
                     <div class="">
-                        <input type="number" placeholder="Product Price" name="price" value="<?php echo $result['price']; ?>" required>
+                        <input type="number" placeholder="Product Price" name="price"
+                            value="<?php echo $result['price']; ?>" required>
                     </div>
                     <div class="">
-                        <textarea name="detail" id="" cols="30" rows="5" required><?php echo $result['details'] ?></textarea>
+                        <select name="category" id="">
+                            <option value="<?php echo $result['category']; ?>"><?php echo $result['category']; ?></option>
+                            <option value="Fruit">Fruit</option>
+                            <option value="Vegetable">Vegetable</option>
+                        </select>
+                    </div>
+                    <div class="">
+                        <textarea name="detail" id="" cols="30" rows="5"
+                            required><?php echo $result['details'] ?></textarea>
                     </div>
                     <div class="">
                         <button type="submit" name="submit">Update Product</button>

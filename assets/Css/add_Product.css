@@ -27,7 +27,7 @@ form {
 
 input,
 button,
-textarea {
+textarea,select {
     padding: 10px 20px;
     margin: 5px;
     border: 2px solid orange;
@@ -37,6 +37,9 @@ textarea {
     width: 100%;
     background: transparent;
     color: white;
+}
+select{
+    color: black;
 }
 
 ::placeholder {

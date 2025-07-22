@@ -6,7 +6,7 @@ $delete->bind_param("i", $ids);
 $delete->execute();
 if ($delete) {
     echo "<script>alert('Product Deleted Successfully');</script>";
-    echo "<script>window.location.href = './view_fruit.php';</script>";
+    echo "<script>window.location.href = './dashboad.php';</script>";
 } else {
     echo "<script>alert('Failed to Delete Product');</script>";
     echo "<script>window.location.href = './view_fruit.php';</script>";

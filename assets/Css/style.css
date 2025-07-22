@@ -466,62 +466,13 @@ header .num {
     left: 10%;
     top: -50%;
 }
-
-/* @media screen and (min-width:768px) and (max-width:991.98px) {
-    .catagories .card-i {
-        height: 250px;
-    }
-
-    .catagories .card-i .name {
-        top: 120px;
-        padding: 5px;
-        left: 10%;
-        height: 100px;
-    }
-
-    .catagories .card-ii {
-        height: 250px;
-    }
-
-    .catagories .card-ii .name {
-        top: 120px;
-        padding: 5px;
-        left: 10%;
-        height: 100px;
-    }
-
-    .catagories .card-iii {
-        height: 250px;
-    }
-
-    .catagories .card-iii .name {
-        top: 120px;
-        padding: 5px;
-        left: 10%;
-        height: 100px;
-    }
-}
-
-@media screen and (min-width:576px) and (max-width:767.98px) {
-
-    .catagories .card-i .name {
-        top: 350px;
-    }
-
-    .catagories .card-ii .name {
-        top: 350px;
-    }
-
-    .catagories .card-iii .name {
-        top: 350px;
-    }
-} */
-
 .vages {
     margin-top: 50px;
     margin-bottom: 90px;
 }
-
+.vages .card img {
+    height: 250px;
+}
 
 .vages .card {
     border: 1px solid #13e413;
@@ -561,6 +512,16 @@ header .num {
     border: 1px solid orange;
     border-radius: 20px;
     font-weight: bold;
+}
+.vages .card .card-text {
+    height: 100px;
+    overflow-y: scroll;
+    text-align: justify;
+}
+
+.vages .card .card-text::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
 }
 
 .store {

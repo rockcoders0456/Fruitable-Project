@@ -1,12 +1,18 @@
 <?php
 include_once './assets/PHP/conn.php';
-$select = $conn->prepare("SELECT * FROM `products`");
+$category1 = "Fruit";
+$category2 = "Vegetable";
+$select = $conn->prepare("SELECT * FROM `products` WHERE category = ?");
+$select->bind_param("s", $category1);
+$select2 = $conn->prepare("SELECT * FROM `products` WHERE category = ?");
+$select2->bind_param("s", $category2);
 if (!$select) {
     die("Products query prepare failed: " . $conn->error);
 };
 $select->execute();
 $get = $select->get_result();
-
+$select2->execute();
+$get2 = $select2->get_result();
 $cselect = $conn->prepare("SELECT * FROM `carousel`");
 if (!$cselect) {
     die("Carousel query prepare failed: " . $conn->error);
@@ -25,7 +31,7 @@ $cget = $cselect->get_result();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fruitables</title>
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"> -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="./assets/Laibraries/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/Css/style.css">
 
@@ -323,104 +329,39 @@ $cget = $cselect->get_result();
                     <h1>Fresh Organic Vegetables</h1>
                 </div>
                 <div class="row">
-                    <div class="col-lg-3 col-md-6 col-sm-12 text-start mt-5">
-                        <div class="card p-0">
-                            <div class="fruit">
-                                <p>
-                                    Vegetables
-                                </p>
-                            </div>
-                            <img src="./assets/img/vegetable-item-6.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title text-start ">Parsley</h5>
-                                <p class="card-text text-start">Lorem ipsum dolor sit amet consectetur adipisicing
-                                    elit.
-                                    Officia
-                                    dolor consequatur explicabo error
-                                </p>
-                                <h5 class="card-title text-start">$4.99 / Kg</h5>
-                                <div class="buton mt-3">
-                                    <a href="#" class="btn"><i class="fa-solid fa-bag-shopping bag"></i> Add
-                                        to cart</a>
+                    <?php
+                    while ($result2 = $get2->fetch_assoc()) {
+                    ?>
+                        <div class="col-lg-3 col-md-6 col-sm-12 my-2 text-center">
+                            <div class="card p-0">
+                                <div class="fruit">
+                                    <p>
+                                        Vegetable
+                                    </p>
+                                </div>
+                                <img src="./assets/Images/<?php echo $result2['image']; ?>" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        <?php echo $result2['tittle']; ?>
+                                    </h5>
+                                    <p class="card-text">
+                                        <?php echo $result2['details']; ?>
+                                    </p>
+                                    <h5 class="card-title text-start">$
+                                        <?php echo $result2['price']; ?>/Kg
+                                    </h5>
+                                    <div class="buton mt-3">
+                                        <a href="./assets/PHP/shop_details.php" class="btn"><i class="fa-solid fa-bag-shopping bag"></i> Add
+                                            to cart</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-
-
-                    <div class="col-lg-3 col-md-6 col-sm-12 text-start mt-5">
-                        <div class="card p-0">
-                            <div class="fruit">
-                                <p>
-                                    Vegetables
-                                </p>
-                            </div>
-                            <img src="./assets/img/vegetable-item-1.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title text-start ">Tomato</h5>
-                                <p class="card-text text-start">Lorem ipsum dolor sit amet consectetur adipisicing
-                                    elit.
-                                    Officia
-                                    dolor consequatur explicabo error
-                                </p>
-                                <h5 class="card-title text-start">$4.99 / Kg</h5>
-                                <div class="buton mt-3">
-                                    <a href="#" class="btn"><i class="fa-solid fa-bag-shopping bag"></i> Add
-                                        to cart</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 col-sm-12 text-start mt-5">
-                        <div class="card p-0">
-                            <div class="fruit">
-                                <p>
-                                    Vegetables
-                                </p>
-                            </div>
-                            <img src="./assets/img/vegetable-item-3.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title text-start ">Banana</h5>
-                                <p class="card-text text-start">Lorem ipsum dolor sit amet consectetur adipisicing
-                                    elit.
-                                    Officia
-                                    dolor consequatur explicabo error
-                                </p>
-                                <h5 class="card-title text-start">$4.99 / Kg</h5>
-                                <div class="buton mt-3">
-                                    <a href="#" class="btn"><i class="fa-solid fa-bag-shopping bag"></i> Add
-                                        to cart</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="col-lg-3 col-md-6 col-sm-12 text-start mt-5">
-                        <div class="card p-0">
-                            <div class="fruit">
-                                <p>
-                                    Vegetables
-                                </p>
-                            </div>
-                            <img src="./assets/img/vegetable-item-4.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title text-start ">Bell Pepper</h5>
-                                <p class="card-text text-start">Lorem ipsum dolor sit amet consectetur adipisicing
-                                    elit.
-                                    Officia
-                                    dolor consequatur explicabo error
-                                </p>
-                                <h5 class="card-title text-start">$4.99 / Kg</h5>
-                                <div class="buton mt-3">
-                                    <a href="#" class="btn"><i class="fa-solid fa-bag-shopping bag"></i> Add
-                                        to cart</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <?php
+                    }
+                    ?>
                 </div>
+            </div>
             </div>
         </div>
     </section>
