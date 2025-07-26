@@ -1,0 +1,889 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0px;
+    margin: 0px;
+}
+
+body::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.nv {
+    background-color: #13e413;
+    padding: 20px;
+    border-radius: 60px 20px;
+    font-weight: bold;
+    color: white;
+}
+
+.nv .policy {
+    text-align: end;
+}
+
+@media screen and (max-width: 991.98px) {
+    .nv .policy {
+        text-align: left;
+    }
+}
+
+header {
+    overflow: hidden;
+
+}
+
+header .logo h1 {
+    color: #13e413;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+header .list ul {
+    list-style: none;
+    display: flex;
+}
+
+header .list ul li a {
+    text-decoration: none;
+    padding-bottom: 10px;
+    margin: 20px;
+    color: gray;
+    font-weight: 600;
+    transition: all ease-in-out 200ms;
+    border-bottom: 2px solid #13e41300;
+}
+
+header .list ul li a:hover {
+    color: #13e413;
+    border-bottom: 2px solid #13e413;
+}
+
+header .icon {
+    text-align: end;
+}
+
+header .icon i {
+    color: #13e413;
+    font-size: 30px;
+    margin: 0px 10px;
+    font-size: 30px;
+    margin: 0px 10px;
+}
+
+header .icon .srch {
+    padding: 10px;
+    border: 1px solid orange;
+    border-radius: 50%;
+    font-size: 20px;
+    position: relative;
+}
+
+header .icon .bag {
+    position: relative;
+}
+
+header .num {
+    background-color: orange;
+    height: 20px;
+    width: 20px;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+
+
+.hero {
+    background-image: url(../img/hero-img.jpg);
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    padding: 90px;
+}
+
+.hero p {
+    color: orange;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.hero h1 {
+    color: #13e413;
+    font-size: 60px;
+    font-weight: bolder;
+}
+
+.hero form .main-form {
+    position: relative;
+}
+
+.hero form input {
+    outline: none;
+    border: 2px solid orange;
+    padding: 15px 20px;
+    border-radius: 50px;
+    width: 100%;
+    color: gray;
+    text-transform: capitalize;
+}
+
+.hero ::placeholder {
+    color: #13e413;
+    font-weight: 600;
+}
+
+.hero form button {
+    background-color: #13e413;
+    padding: 15px 20px;
+    border-radius: 50px;
+    position: absolute;
+    outline: none;
+    border: 2px solid orange;
+    color: white;
+    top: 0px;
+    right: 0px;
+}
+
+.hero form button:hover {
+    background-color: #13e413;
+    border: 2px solid orange;
+}
+
+.carasul {
+    position: relative;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.carasul .fruit {
+    text-align: center;
+    position: absolute;
+    z-index: 10;
+    background-color: #13e413b2;
+    border-radius: 10px;
+    margin: 0px;
+    height: 50px;
+    width: 100px;
+}
+
+.service .card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    text-align: center;
+    border: none;
+    background-color: aliceblue;
+    padding: 20px 0px;
+    transition: all ease-in-out 800ms;
+}
+
+.service .card:hover {
+    transform: rotateY(360deg);
+    background-color: orange;
+    color: aliceblue;
+}
+
+.service .card .icon {
+    margin: 20px;
+    margin-bottom: 10px;
+    padding: 20px;
+    border-radius: 50%;
+    background-color: orange;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: aliceblue;
+    transition: all ease-in-out 800ms;
+}
+
+.service .card:hover .icon {
+    background-color: aliceblue;
+    color: orange;
+}
+
+.organic-products .heading h3 {
+    font-size: 40px;
+    padding-left: 20px;
+    font-weight: 600;
+}
+
+.products-list ul {
+    margin-top: 20px;
+    list-style: none;
+    display: flex;
+}
+
+.products-list ul li {
+    height: 40px;
+    width: 150px;
+    padding: 8px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    background-color: aliceblue;
+    transition: all ease-in-out 500ms;
+}
+
+@media screen and (max-width :768px) {
+    .products-list ul li {
+        padding: 5px;
+    }
+
+    .products-list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .products-list ul {
+        display: block;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .organic-products .heading {
+        text-align: center;
+        font-size: 60px;
+        font-weight: bold;
+        color: #13e413;
+    }
+
+    .hero h1 {
+        font-size: 20px;
+    }
+
+    header .list ul {
+        display: block;
+    }
+
+    .main-footer form button {
+        padding: 0px;
+        width: 100px;
+        height: 58px;
+        font-size: 10px;
+    }
+
+    .hero form button {
+        padding: 0px;
+        width: 80px;
+        height: 58px;
+        font-size: 10px;
+    }
+
+}
+
+.products-list ul li:hover {
+    background-color: orange;
+    color: aliceblue;
+}
+
+.products-cards {
+    margin-left: 90px;
+    margin-right: 90px;
+    margin-top: 0px;
+    display: flex;
+    justify-content: center;
+}
+
+.cards .card {
+    border: 1px solid orange;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+    background-color: white;
+}
+
+.cards .card img {
+    height: 250px;
+}
+
+.cards .card .card-text {
+    height: 100px;
+    overflow-y: scroll;
+    text-align: justify;
+}
+
+.cards .card .card-text::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
+
+.cards .fruit {
+    position: absolute;
+    background-color: orange;
+    color: white;
+    font-weight: bold;
+    z-index: 1;
+    width: 70px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 14px;
+    border-radius: 20px;
+    left: 10px;
+    top: 10px;
+}
+
+.cards .card .buton {
+    display: flex;
+    justify-content: start;
+}
+
+.cards .card .buton a {
+    background-color: none;
+    color: #13e413;
+    border: 1px solid orange;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.catagories .card-i {
+    margin-top: 90px;
+    background-color: white;
+    border: 1px solid orange;
+    border-radius: 10px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.catagories .card-i .name p {
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.catagories .card-i .name h3 {
+    color: rgb(68, 67, 67);
+}
+
+.catagories .card-i .btm {
+    background-color: orange;
+    width: 100%;
+    height: 130px;
+    position: relative;
+}
+
+.catagories .card-i .btm .name {
+    background-color: #13e413;
+    width: 80%;
+    height: 100%;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    position: absolute;
+    left: 10%;
+    top: -50%;
+}
+
+.catagories .card-ii {
+    margin-top: 90px;
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 10px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.catagories .card-ii .name p {
+    color: #13e413;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.catagories .card-ii .name h3 {
+    color: rgb(68, 67, 67);
+}
+
+.catagories .card-ii .btm {
+    background-color: gray;
+    width: 100%;
+    height: 130px;
+    position: relative;
+
+}
+
+.catagories .card-ii .btm .name {
+    background-color: white;
+    width: 80%;
+    height: 100%;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    position: absolute;
+    left: 10%;
+    top: -50%;
+}
+
+.catagories .card-iii {
+    margin-top: 90px;
+    margin-bottom: 90px;
+    background-color: white;
+    border: 1px solid #13e413;
+    border-radius: 10px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.catagories .card-iii .name p {
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.catagories .card-iii .name h3 {
+    color: rgb(68, 67, 67);
+}
+
+.catagories .card-iii .btm {
+    background-color: #13e413;
+    width: 100%;
+    height: 130px;
+    position: relative;
+}
+
+.catagories .card-iii .btm .name {
+    background-color: orange;
+    width: 80%;
+    height: 100%;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    position: absolute;
+    left: 10%;
+    top: -50%;
+}
+
+.vages {
+    margin-top: 50px;
+    margin-bottom: 90px;
+}
+
+.vages .card img {
+    height: 250px;
+}
+
+.vages .card {
+    border: 1px solid #13e413;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+    background-color: white;
+}
+
+
+.vages .fruit {
+    position: absolute;
+    background-color: #13e413;
+    color: white;
+    font-weight: bold;
+    z-index: 1;
+    width: 120px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 14px;
+    border-radius: 20px;
+    right: 10px;
+    top: 10px;
+}
+
+.vages .card .buton {
+
+    display: flex;
+    justify-content: start;
+}
+
+.vages .card .buton a {
+    background-color: none;
+    color: #13e413;
+    border: 1px solid orange;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.vages .card .card-text {
+    height: 100px;
+    overflow-y: scroll;
+    text-align: justify;
+}
+
+.vages .card .card-text::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
+.store {
+    background-color: orange;
+    padding: 90px 0px 20px 90px;
+    margin: 90px 0px;
+}
+
+.store .text h1 {
+    font-size: 60px;
+    font-weight: 600;
+    color: white;
+    margin: 60px 0px 20px 0px;
+}
+
+.store .text h3 {
+    color: rgb(68, 67, 67);
+    font-size: 50px;
+    font-weight: 400;
+}
+
+.store .text p {
+    color: rgb(68, 67, 67);
+    font-weight: 400;
+}
+
+.store .text a {
+    background-color: transparent;
+    color: rgb(68, 67, 67);
+    font-weight: 600;
+    border: 1px solid white;
+    border-radius: 25px;
+    padding: 8px 30px;
+}
+
+.store .img {
+    position: relative;
+    text-align: center;
+}
+
+.store .img img {
+    height: 450px;
+}
+
+.store .img .price {
+    position: absolute;
+    background-color: white;
+    display: flex;
+    height: 125px;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-family: 'Times New Roman', Times, serif;
+    left: 40px;
+    top: 10px;
+
+}
+
+.store .img .price h1 {
+    font-size: 60px;
+    font-weight: 800;
+    color: #444343;
+}
+
+.store .img .price h1 sub {
+    font-size: 15px;
+    font-weight: 800;
+    color: rgb(68, 67, 67);
+}
+
+.store .img .price h2 sup {
+    font-size: 20px;
+    font-weight: 800;
+    color: rgb(68, 67, 67);
+}
+
+.bestseller .text {
+    text-align: center;
+    color: gray;
+}
+
+.bestseller .text h1 {
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.best-product .card {
+    background-color: aliceblue;
+    padding: 20px;
+    border-radius: 10px;
+
+}
+
+.best-product img {
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    margin-top: 45%;
+}
+
+.best-product .card b {
+    color: #444343;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.best-product .icon {
+    background-color: transparent;
+    color: #13e413;
+    height: 30px;
+    margin: 10px -8px;
+    padding: 0px;
+}
+
+.best-product .card .butn a {
+    background-color: none;
+    color: #13e413;
+    border: 1px solid orange;
+    border-radius: 25px;
+    font-weight: bold;
+    line-height: 15px;
+}
+
+.last-fruit .card {
+    overflow: hidden;
+}
+
+.last-fruit .card img {
+    border-radius: 10px;
+    margin: 0px;
+    border-radius: 0px;
+    width: 100%;
+    height: 200px;
+    border-bottom: #13e413 1px solid;
+}
+
+.last-fruit .card i {
+    color: #13e413;
+    margin-top: 10px;
+}
+
+.last-fruit .card b {
+    color: #444343;
+}
+
+
+
+.last {
+    background-color: aliceblue;
+    border-radius: 10px;
+}
+
+.last .card {
+    text-align: center;
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+}
+
+.last .card i {
+    font-size: 50px;
+}
+
+.last .card p {
+    margin-top: 10px;
+    color: #4dff00;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.last .card h1 {
+    margin-top: 10px;
+    font-weight: 600;
+    color: rgb(63, 61, 61);
+}
+
+.comments-heading b {
+    color: #13e413;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.comments-heading h1 {
+    color: rgb(87, 86, 86);
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.comments .card {
+    background-color: aliceblue;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.comments .card p {
+    color: gray;
+}
+
+hr {
+    padding: 0px;
+    margin: 0px;
+    border: none;
+    width: 100%;
+    height: 2px;
+    background-color: orange;
+    opacity: 1;
+}
+
+.comments .card .flex {
+    width: 100%;
+}
+
+.comments .card .flex h3 {
+    font-size: 30px;
+    font-weight: 600;
+    color: rgb(73, 73, 73);
+}
+
+.comments .card .flex .comment-icon {
+    color: #13e413;
+}
+
+.comments .card .flex .thumb {
+    width: 40%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    font-size: 40px;
+    text-shadow: 5px 5px 10px rgb(99, 96, 96);
+}
+
+.main-footer {
+    padding: 50px 90px 20px 90px;
+    background-color: rgb(76, 112, 81);
+}
+
+.main-footer .text h3 {
+    color: #13e413;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.main-footer .text p {
+    color: orange;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 10px;
+}
+
+.main-footer form .main-form {
+    position: relative;
+    transform: translate(0px, -35px);
+}
+
+.main-footer form input {
+    outline: none;
+    border: 2px solid orange;
+    padding: 15px 20px;
+    border-radius: 50px;
+    width: 100%;
+    color: gray;
+    text-transform: capitalize;
+}
+
+.main-footer ::placeholder {
+    color: #13e413;
+    font-weight: 600;
+}
+
+.main-footer form button {
+    background-color: #13e413;
+    padding: 15px 20px;
+    border-radius: 50px;
+    position: absolute;
+    outline: none;
+    border: 2px solid orange;
+    color: white;
+    top: 0px;
+    right: 0px;
+}
+
+.main-footer form button:hover {
+    background-color: #13e413;
+    border: 2px solid orange;
+}
+
+.main-footer .footer-icon i {
+    text-align: center;
+    padding-top: 15px;
+    color: orange;
+    border: 1px solid orange;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    margin-left: 10px;
+    transition: all ease-in-out 500ms;
+}
+
+.main-footer .footer-icon i:hover {
+    transform: scale(1.3) translate(0px, -10px);
+    background-color: orange;
+    color: white;
+}
+
+.main-footer .list ul {
+    list-style: none;
+}
+
+.main-footer .list ul li {
+    padding-top: 10px;
+}
+
+.main-footer .list ul li p {
+    line-height: 30px;
+    color: rgb(173, 173, 173);
+}
+
+.main-footer .list ul li h3 {
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.main-footer .list ul li {
+    color: rgb(173, 173, 173);
+}
+
+.main-footer .list ul li a {
+    border: 2px solid orange;
+    border-radius: 25px;
+    padding: 5px 20px;
+    margin: 0px;
+    text-decoration: none;
+    color: #13e413;
+    font-weight: 600;
+}
+
+.main-footer .line {
+    color: white;
+    font-weight: 600;
+}
+
+.main-footer .line span {
+    color: #13e413;
+    padding-bottom: 2px;
+    border-bottom: 2px solid white;
+}
+
+
+
+@media screen and (min-width:768px) and (max-width:991.98px) {
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+}

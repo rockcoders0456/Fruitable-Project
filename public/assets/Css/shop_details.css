@@ -1,0 +1,597 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0px;
+    margin: 0px;
+}
+
+.nv {
+    background-color: #13e413;
+    padding: 20px;
+    border-radius: 60px 20px;
+    font-weight: bold;
+    color: white;
+}
+
+.nv .policy {
+    text-align: end;
+}
+
+@media screen and (max-width: 991.98px) {
+    .nv .policy {
+        text-align: left;
+    }
+}
+
+header {
+    overflow: hidden;
+
+}
+
+header .logo h1 {
+    color: #13e413;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+header .list ul {
+    list-style: none;
+    display: flex;
+}
+
+header .list ul li a {
+    text-decoration: none;
+    padding-bottom: 10px;
+    margin: 20px;
+    color: gray;
+    font-weight: 600;
+    transition: all ease-in-out 200ms;
+    border-bottom: 2px solid #13e41300;
+}
+
+header .list ul li a:hover {
+    color: #13e413;
+    border-bottom: 2px solid #13e413;
+}
+
+header .icon {
+    text-align: end;
+}
+
+header .icon i {
+    color: #13e413;
+    font-size: 30px;
+    margin: 0px 10px;
+    font-size: 30px;
+    margin: 0px 10px;
+}
+
+header .icon .srch {
+    padding: 10px;
+    border: 1px solid orange;
+    border-radius: 50%;
+    font-size: 20px;
+    position: relative;
+}
+
+header .icon .bag {
+    position: relative;
+}
+
+header .num {
+    background-color: orange;
+    height: 20px;
+    width: 20px;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 991.98px) {
+    header .icon {
+        text-align: center;
+        margin-top: 20px;
+    }
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    background-image: url('../../assets/img/cart-page-header-img.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    margin-bottom: 50px;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: -1;
+}
+
+.hero h1,
+.hero .crumb ol li {
+    color: white;
+    font-weight: 600;
+    z-index: 2;
+}
+
+.hero .crumb ol li a {
+    color: #13e413;
+    text-decoration: none;
+}
+
+.item .card {
+    padding: 0px;
+    height: 100%;
+    overflow: hidden;
+    background-color: #13e413;
+}
+
+.item .details {
+    margin: 0px;
+}
+
+.item .details h2 {
+    color: gray;
+    font-weight: 650;
+}
+
+.item .details .rating i {
+    color: orange;
+}
+
+.item .details p {
+    color: gray;
+    font-weight: 500;
+    text-align: center;
+}
+
+.item .details .count i {
+    color: gray;
+    height: 30px;
+    width: 30px;
+    font-size: 20px;
+    padding: 5px 5px 5px 5px;
+    background-color: rgb(205, 205, 205);
+    border: 1px solid gray;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.item .details .count input {
+    border: none;
+    margin-top: 5px;
+    outline: none;
+    font-size: 20px;
+    text-align: center;
+    color: gray;
+    font-weight: 600;
+}
+
+.item .details .butn a {
+    background-color: none;
+    color: #13e413;
+    border: 1px solid orange;
+    border-radius: 25px;
+    font-weight: bold;
+    line-height: 15px;
+}
+
+.keywords {
+    color: gray;
+}
+
+.keywords h3 {
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+.keywords .main {
+    display: flex;
+    justify-content: space-between;
+    color: #13e413;
+}
+
+.keywords .main .icon {
+    display: flex;
+    justify-content: left;
+}
+
+.keywords .main .text {
+    color: gray;
+}
+
+.featured .review ul {
+    list-style: none;
+    display: flex;
+    justify-content: left;
+    margin: 0px;
+    padding: 0px;
+}
+
+.featured .review ul li {
+    margin-right: 20px;
+    padding: 5px 10px;
+    font-weight: 600;
+    color: gray;
+}
+
+.featured .review ul li:nth-child(1) {
+    border-bottom: 2px solid orange;
+    z-index: 1;
+}
+
+.featured .review ul li:nth-child(2) {
+    color: #13e413;
+}
+
+.featured .review hr {
+    margin-top: -2px;
+    z-index: -1;
+}
+
+.featured .review p {
+    color: gray;
+    font-weight: 600;
+}
+
+.featured .review table td {
+    color: gray;
+    font-weight: 600;
+    text-align: center;
+}
+
+.fthr {
+    margin-top: -150px;
+}
+
+.fthr h2 {
+    color: gray;
+    font-weight: 600;
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+
+.fthr .main-featured {
+    display: flex;
+    justify-content: left;
+    margin-top: 10px;
+}
+
+.fthr .main-featured .img img {
+    width: 120px;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+.fthr .main-featured .text {
+    color: gray;
+    margin-top: 20px;
+}
+
+.fthr .main-featured p {
+    font-weight: 600;
+    margin: 0px;
+}
+
+.fthr .main-featured h3 {
+    font-weight: 600;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.fthr .main-featured h3 s {
+    color: red;
+}
+
+.fthr .main-featured .rating i {
+    color: orange;
+    margin: 0px;
+}
+
+.comment h1 {
+    color: gray;
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.comment .form {
+    width: 100%;
+}
+
+.comment .form .inputs {
+    display: flex;
+    justify-content: space-between;
+}
+
+.comment .form input,
+textarea {
+    width: 49%;
+    margin: 0px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid gray;
+    border-radius: 5px;
+    outline: none;
+    color: gray;
+    font-weight: 600;
+}
+
+.comment .form textarea {
+    width: 100%;
+    text-transform: capitalize;
+}
+
+.comment .form .rating {
+    display: flex;
+    justify-content: left;
+}
+
+.comment .form .rating p {
+    margin-right: 20px;
+}
+
+.comment .form .rating i {
+    margin-top: 5px;
+    color: gray;
+}
+
+.comment .bttn button {
+    background-color: none;
+    color: #13e413;
+    border: 1px solid orange;
+    border-radius: 25px;
+    font-weight: bold;
+    line-height: 15px;
+    padding: 15px 20px;
+}
+
+.comment .form .post_comment {
+    display: flex;
+    justify-content: space-between;
+}
+
+.last .butn a {
+    background-color: none;
+    color: #13e413;
+    border: 1px solid orange;
+    border-radius: 25px;
+    font-weight: bold;
+    line-height: 15px;
+    width: 100%;
+    padding: 15px 0px;
+}
+
+.last .img {
+    margin-top: 10px;
+    overflow: hidden;
+    height: 300px;
+    position: relative;
+}
+
+.last .img img {
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+}
+
+.last .img .text {
+    position: absolute;
+    z-index: 10;
+    left: 55%;
+    top: 30%;
+    color: orange;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.last .img .text h1 {
+    font-weight: 600;
+    font-size: 35px;
+}
+
+.vages {
+    margin-top: 50px;
+    margin-bottom: 90px;
+}
+
+.vages .heading {
+    color: gray;
+    font-weight: 600;
+}
+
+
+.vages .card {
+    border: 1px solid #13e413;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+    background-color: white;
+}
+.vages .card img{
+    height: 240px;
+}
+
+
+.vages .fruit {
+    position: absolute;
+    background-color: #13e413;
+    color: white;
+    font-weight: bold;
+    z-index: 1;
+    width: 120px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 14px;
+    border-radius: 20px;
+    right: 10px;
+    top: 10px;
+}
+.vages .card .card-text {
+    height: 100px;
+    overflow-y: scroll;
+    text-align: justify;
+}
+.vages .card .card-text::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
+.vages .card .buton {
+
+    display: flex;
+    justify-content: start;
+}
+
+.vages .card .buton a {
+    background-color: none;
+    color: #13e413;
+    border: 1px solid orange;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.main-footer {
+    padding: 50px 90px 20px 90px;
+    background-color: rgb(76, 112, 81);
+}
+
+.main-footer .text h3 {
+    color: #13e413;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.main-footer .text p {
+    color: orange;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 10px;
+}
+
+.main-footer form .main-form {
+    position: relative;
+    transform: translate(0px, -35px);
+}
+
+.main-footer form input {
+    outline: none;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 50px;
+    width: 100%;
+    color: gray;
+    text-transform: capitalize;
+}
+
+.main-footer ::placeholder {
+    color: #13e413;
+    font-weight: 600;
+}
+
+.main-footer form button {
+    background-color: #13e413;
+    padding: 15px 20px;
+    border-radius: 50px;
+    position: absolute;
+    border: none;
+    outline: none;
+    color: white;
+    top: 0px;
+    right: 0px;
+}
+
+.main-footer form button:hover {
+    background-color: #13e413;
+}
+
+.main-footer .footer-icon i {
+    text-align: center;
+    padding-top: 15px;
+    color: orange;
+    border: 1px solid orange;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    margin-left: 10px;
+    transition: all ease-in-out 500ms;
+}
+
+.main-footer .footer-icon i:hover {
+    transform: scale(1.3) translate(0px, -10px);
+    background-color: orange;
+    color: white;
+}
+
+.main-footer hr {
+    height: 1px;
+    background-color: orange;
+    border: none;
+    outline: none;
+    opacity: 1;
+}
+
+.main-footer .list ul {
+    list-style: none;
+}
+
+.main-footer .list ul li {
+    padding-top: 10px;
+}
+
+.main-footer .list ul li p {
+    line-height: 30px;
+    color: rgb(173, 173, 173);
+}
+
+.main-footer .list ul li h3 {
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.main-footer .list ul li {
+    color: rgb(173, 173, 173);
+}
+
+.main-footer .list ul li a {
+    border: 2px solid orange;
+    border-radius: 25px;
+    padding: 5px 20px;
+    margin: 0px;
+    text-decoration: none;
+    color: #13e413;
+    font-weight: 600;
+}
+
+.main-footer .line {
+    color: white;
+    font-weight: 600;
+}
+
+.main-footer .line span {
+    color: #13e413;
+    padding-bottom: 2px;
+    border-bottom: 2px solid white;
+}
